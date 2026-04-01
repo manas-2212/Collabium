@@ -1,0 +1,113 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  STUDENT
+  ALUMNI
+  ADMIN
+}
+
+enum PostType {
+  JOB
+  INTERNSHIP
+  COLLAB
+  PITCH
+}
+
+enum PostStatus {
+  ACTIVE
+  CLOSED
+  PENDING_REVIEW
+}
+
+enum InterestStatus {
+  PENDING
+  SEEN
+  SHORTLISTED
+  REJECTED
+}
+
+model User {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  email       String   @unique
+  password    String
+  role        Role     @default(STUDENT)
+  batch       String?
+  skills      String[]
+  domain      String?
+  avatar      String?
+  bio         String?
+  isVerified  Boolean  @default(false)
+
+//links
+  githubUrl   String?
+  linkedinUrl String?
+  resumeUrl   String?
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+//opportunities
+  posts         Post[]
+  interests     Interest[]
+  notifications Notification[]
+  adminActions  AdminAction[]
+}
+
+model Post {
+  id          String     @id @default(auto()) @map("_id") @db.ObjectId
+  authorId    String     @db.ObjectId
+  author      User       @relation(fields: [authorId], references: [id])
+  type        PostType
+  title       String
+  description String
+  skillTags   String[]
+  batchPref   String?
+  targetRole  Role?
+  status      PostStatus @default(ACTIVE)
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+
+  interests   Interest[]
+}
+
+model Interest {
+  id        String         @id @default(auto()) @map("_id") @db.ObjectId
+  postId    String         @db.ObjectId
+  post      Post           @relation(fields: [postId], references: [id])
+  userId    String         @db.ObjectId
+  user      User           @relation(fields: [userId], references: [id])
+  status    InterestStatus @default(PENDING)
+  message   String?
+  createdAt DateTime       @default(now())
+
+  @@unique([postId, userId])
+}
+
+model Notification {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @db.ObjectId
+  user      User     @relation(fields: [userId], references: [id])
+  type      String
+  message   String
+  refId     String?
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model AdminAction {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  adminId    String   @db.ObjectId
+  admin      User     @relation(fields: [adminId], references: [id])
+  targetId   String
+  actionType String
+  note       String?
+  createdAt  DateTime @default(now())
+}
