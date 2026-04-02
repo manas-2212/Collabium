@@ -36,7 +36,7 @@ app.get('/health', (req, res) => {
 app.use(errorHandler)
 
 app.listen(PORT, () => {
-  console.log(`🚀 RUnite server running on port ${PORT}`)
+  console.log(`Collabium server running on port ${PORT}`)
 })
 
 export default app

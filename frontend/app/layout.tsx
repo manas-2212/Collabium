@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'RUnite — Rishihood University Network',
+  title: 'Collabium — Rishihood University Network',
   description: 'Where Rishihood comes together',
 }
 

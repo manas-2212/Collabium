@@ -83,8 +83,8 @@ export default function Landing() {
         letterSpacing: '-0.5px',
         lineHeight: 1.2
       }}>
-        Where Rishihood<br />
-        <span style={{ color: 'var(--primary)' }}>comes together</span>
+        Collabium<br />
+        <span style={{ color: 'var(--primary)' }}>Private Network</span>
       </h1>
 
       <p style={{

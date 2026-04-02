@@ -105,7 +105,7 @@ export default function Navbar() {
             <span style={{ color: '#fff', fontWeight: 700, fontSize: '13px' }}>R</span>
           </div>
           <span style={{ fontWeight: 700, fontSize: '15px', color: 'var(--text-primary)', letterSpacing: '-0.3px' }}>
-            RUnite
+            Collabium - RU
           </span>
         </Link>
 
