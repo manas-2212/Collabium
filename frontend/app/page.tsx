@@ -49,7 +49,7 @@ export default function Landing() {
         marginBottom: '28px',
         boxShadow: '0 0 32px rgba(249,115,22,0.4)'
       }}>
-        <span style={{ color: '#fff', fontWeight: 700, fontSize: '22px', letterSpacing: '-0.5px' }}>R</span>
+        <span style={{ color: '#fff', fontWeight: 700, fontSize: '22px', letterSpacing: '-0.5px' }}>C</span>
       </div>
 
       {/* Badge */}

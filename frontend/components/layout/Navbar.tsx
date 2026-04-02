@@ -102,7 +102,7 @@ export default function Navbar() {
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             boxShadow: '0 0 12px rgba(249,115,22,0.4)'
           }}>
-            <span style={{ color: '#fff', fontWeight: 700, fontSize: '13px' }}>R</span>
+            <span style={{ color: '#fff', fontWeight: 700, fontSize: '13px' }}>C</span>
           </div>
           <span style={{ fontWeight: 700, fontSize: '15px', color: 'var(--text-primary)', letterSpacing: '-0.3px' }}>
             Collabium - RU

@@ -63,7 +63,7 @@ export default function Onboarding() {
         marginBottom: '28px',
         boxShadow: '0 0 24px rgba(249,115,22,0.35)'
       }}>
-        <span style={{ color: '#fff', fontWeight: 700, fontSize: '18px' }}>R</span>
+        <span style={{ color: '#fff', fontWeight: 700, fontSize: '18px' }}>C</span>
       </div>
 
       <h1 style={{
