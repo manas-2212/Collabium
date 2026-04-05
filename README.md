@@ -291,7 +291,3 @@ vercel --prod
 - Email: manas.selukar2024@nst.rishihood.edu.in
 
 ---
-
-## License
-
-MIT
