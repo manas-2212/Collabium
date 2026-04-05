@@ -10,8 +10,8 @@ Collabium brings students and alumni together in one trusted space — to share 
 
 ## Live Demo
 
-- **Frontend:** `https://collabium.vercel.app` *(deploy link here)*
-- **Backend:** `https://collabium-api.onrender.com` *(deploy link here)*
+- **Frontend:** https://collabium-1le0lujpv-manas-projects-2c52bcd7.vercel.app/
+- **Backend:** https://collabium.onrender.com
 
 ---
 
@@ -48,9 +48,9 @@ Collabium brings students and alumni together in one trusted space — to share 
 | MongoDB Atlas | Database |
 | JWT | Authentication |
 | bcryptjs | Password hashing |
-| Nodemailer | OTP email verification |
-| Cloudinary | Avatar + resume file storage |
-| Multer | File upload middleware |
+| Nodemailer | OTP email verification | (In progress)
+| Cloudinary | Avatar + resume file storage | (In progress)
+| Multer | File upload middleware | (In progress)
 
 ---
 
@@ -286,8 +286,8 @@ vercel --prod
 ## Author
 
 **Manas Selukar**
-- GitHub: [@manasselukar](https://github.com/manasselukar)
-- LinkedIn: [linkedin.com/in/manas](https://linkedin.com/in/manas)
+- GitHub: https://github.com/manas-2212
+- LinkedIn: https://www.linkedin.com/in/manas-selukar-0a10312a8/
 - Email: manas.selukar2024@nst.rishihood.edu.in
 
 ---
